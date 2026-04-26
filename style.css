@@ -1,0 +1,89 @@
+:root {
+    --neon-blue: #00d2ff;
+    --dark-bg: #050a14;
+    --card-bg: #0a111e;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.neon-text {
+    color: white;
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    font-weight: 800;
+}
+
+.search-box {
+    max-width: 500px;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    border-radius: 50px;
+    padding: 5px 15px;
+}
+
+#cityInput {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#cityInput:focus {
+    box-shadow: none;
+    background: transparent;
+    color: white;
+}
+
+.btn-neon {
+    background: transparent;
+    border: none;
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.weather-card {
+    background: var(--card-bg);
+    border: 1px solid var(--neon-blue);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ff4d4d;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.temp {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.weather-icon {
+    font-size: 5rem;
+    filter: drop-shadow(0 0 10px var(--neon-blue));
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
